@@ -1,11 +1,12 @@
 import React from 'react';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {createTabNavigator} from 'react-navigation';
+import {createMaterialTopTabNavigator} from 'react-navigation';
 
 import App from "../App";
 import Colors from '../../themes/colors';
 
-export default createTabNavigator(
+
+export default createMaterialTopTabNavigator(
     {
         Profile: App,
         Chat: App,
@@ -24,8 +25,10 @@ export default createTabNavigator(
                 if (routeName === 'Home')
                     iconName = `coffee${outline}`;
 
+
                 else if (routeName === 'Profile')
                     iconName = `account${outline}`;
+
 
                 else if (routeName === 'Chat')
                     iconName = 'wechat';
