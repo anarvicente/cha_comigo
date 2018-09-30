@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import Colors from '../themes/colors'
+import {StyleSheet, Text, View, Button} from 'react-native';
+import Colors from "../../themes/colors";
 
 
 type Props = {};
-export default class App extends Component<Props> {
+
+export default class LoginScreen extends Component<Props> {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.welcome}>Chá Comigo</Text>
+                <Button style={styles.welcome} title='Log In' onPress={() => this.props.navigation.navigate('App')}/>
             </View>
         );
     }
 }
+
 
 const styles = StyleSheet.create({
     container: {
@@ -25,10 +27,5 @@ const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: Colors.secondary,
-        marginBottom: 5,
-    },
+    }
 });

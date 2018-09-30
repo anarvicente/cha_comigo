@@ -2,18 +2,11 @@ import React from 'react';
 import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {createMaterialTopTabNavigator} from 'react-navigation';
 
-import App from "../App";
 import Colors from '../../themes/colors';
 
 
-export default createMaterialTopTabNavigator(
-    {
-        Profile: App,
-        Chat: App,
-        Messages: App,
-        Home: App,
-        Coracao: App
-    },
+export default (appRoutes) => createMaterialTopTabNavigator(
+    appRoutes,
     {
         navigationOptions: ({navigation}) => ({
             tabBarIcon: ({focused, tintColor}) => {
